@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="background-music" loop>
+    <source src="track.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div id="emoji-container"></div>
+  <div id="screen">
+    <div id="content">
+      <!-- Step 1: Initial Screen -->
+      <div id="step1">
+        <h1 id="text1">Dear Rimisha Raima Das</h1>
+        <h1 id="text2">I have some things I want to tell you</h1>
+        <h1 id="text3">Shall we proceed?</h1>
+        <div id="buttons" class="hidden">
+          <button id="yesButton">Yes</button>
+          <button id="noButton">No</button>
+        </div>
+      </div>
+
+      <!-- Step 2: GIF and Text -->
+      <div id="step2" class="hidden">
+        <div id="left">
+          <h1 id="text4">Something magical happened to me last July</h1>
+          <h1 id="text5">I was in my room with no thoughts in my head just existing when my entire world lit up because of a text from you</h1>
+        </div>
+        <div id="right">
+          <img id="gif1" src="gif1.gif" alt="GIF">
+        </div>
+        <button id="proceedButton1" class="hidden">Proceed</button>
+      </div>
+
+      <!-- Step 3: Images and Text -->
+      <div id="step3" class="hidden">
+        <div id="images">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+        </div>
+        <h1 id="text6">The journey with you has been magical, and nothing short of miracles after miracles.</h1>
+        <h1 id="text7">And I can not believe how lucky I am</h1>
+        <button id="proceedButton2" class="hidden">Proceed</button>
+      </div>
+
+      <!-- Step 4: Text and GIF -->
+      <div id="step4" class="hidden">
+        <div id="left">
+          <h1 id="text8">But I know luck runs out</h1>
+          <h1 id="text9">And it is with effort and consistency that things last. And I want us to last.</h1>
+        </div>
+        <div id="right">
+          <img id="gif2" src="gif2.gif" alt="GIF">
+        </div>
+        <button id="proceedButton3" class="hidden">Proceed</button>
+      </div>
+
+      <!-- Step 5: Sequential Texts -->
+      <div id="step5" class="hidden">
+        <div id="left">
+          <h1 id="text10">I wanted to say these to you up front.</h1>
+          <h1 id="text11">But being how dumb I am, I misunderstood and was taking too long.</h1>
+          <h1 id="text12">But please know this, and believe this, I want you.</h1>
+          <h1 id="text13">I have always wanted you,</h1>
+          <h1 id="text14">Not for a day or two but for as long as we can get.</h1>
+        </div>
+        <div id="right">
+          <img id="gif3" src="gif3.gif" alt="GIF">
+        </div>
+        <button id="proceedButton4" class="hidden">Proceed</button>
+      </div>
+
+      <!-- Step 6: Final Question -->
+      <div id="step6" class="hidden">
+        <h1 id="text15">With fear in my heart and hope, I ask you this</h1>
+        <h1 id="text16">From the moment I met you, I knew you were the one. Will you be mine this Valentine’s?</h1>
+        <div id="finalButtons" class="hidden">
+          <button id="finalYes">Yes</button>
+          <button id="finalNo">No</button>
+        </div>
+      </div>
+
+      <!-- Step 7: Responses -->
+      <div id="step7" class="hidden">
+        <h1 id="responseText">MY LOVE, ARE YOU SURE YOU DON’T WANT TO BE MY VALENTINE?</h1>
+        <img id="responseGif" src="gif4.gif" alt="Response GIF"> <!-- Add a GIF here -->
+        <div id="retryButtons" class="hidden">
+          <button id="retryYes">Yes, don't bother me</button>
+          <button id="retryNo">Try harder</button>
+        </div>
+        <div id="bigText" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

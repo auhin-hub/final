@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gorditas', cursive;
+  background-color: lightpink;
+  color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 2s, color 2s;
+}
+
+#screen {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#content h1 {
+  margin: 20px 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#content h1.visible {
+  opacity: 1;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#bigText {
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#bigText.visible {
+  opacity: 1;
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.dynamic-text {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 70px;
+  font-weight: bold;
+  animation: slideLeftToRight 5s linear infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+.bouncing-text {
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  white-space: nowrap;
+  animation: bounce 1s infinite, slideLeftToRight 10s linear infinite;
+}
+
+/* Floating Emojis */
+#emoji-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure emojis don't interfere with clicks */
+  overflow: hidden;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 30px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(0);
+  }
+}
+
+/* Faster animation for Step 6 */
+#step6 .emoji {
+  animation-duration: 3s;
+}
+
+/* Broken heart animation for Step 7 */
+#step7 .emoji {
+  content: "💔";
+  animation-duration: 2s;
+}
+
+/* Add this to your existing CSS */
+#responseText {
+  color: darkred; /* Ensure the text is dark red */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#responseGif {
+  width: 200px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+#retryButtons button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#retryButtons button:hover {
+  transform: scale(1.1);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px; /* Adjust this as needed */
+}
+img[src*="gifs/"] {
+  max-width: 300px; /* Reduce this if needed */
+  height: auto;
+}
